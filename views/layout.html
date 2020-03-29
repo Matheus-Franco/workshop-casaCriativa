@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    {% block title %}
+    <title>Casa Criativa</title>
+    {% endblock title %} {% include "head.html" %}
+  </head>
+
+  <body id="{{bodyId}}">
+    <div id="container">
+      <!-- quando chamar o layout, ele colocará o necessario da pagina content aqui dentro  -->
+      {% block content %} {% endblock %}
+    </div>
+
+    <!--Modal-->
+
+    {% include "modal.html" %}
+    <!-- Inclui o modal que esta na pasta "views"  -->
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>
